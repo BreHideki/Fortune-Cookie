@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: #FFF;
+    --btn-color: #FF9500;
+    --txt-bg-color: #E4EDF1;
+    --txt-h3-color: #34355B;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 26.75rem;
+    height: 26.5rem;
+
+    padding: 3rem 4rem 4rem;
+
+    background-color: var(--white-color);
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.text h3 {
+    color: var(--txt-h3-color);
+     
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+.text p {
+    margin-top: 0.87rem;
+
+    font-size: 0.9rem;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+}
+
+.card img {
+    width: 18.75rem;
+    height: 12.5rem;
+
+    margin-top: 1.25rem; 
+
+    cursor: pointer;
+}
+
+.card img:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+	animation: wobble-hor-bottom 0.8s both;
+}
+
+.second-card {
+    width: 26.75rem;
+    height: 35.25rem;
+
+    padding: 3rem 4rem;
+
+    background-color: var(--white-color);
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.second-card img {
+    width: 18.75rem;
+    height: 12.5rem;
+}
+
+.s-text h3 {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+    color: var(--txt-h3-color);
+}
+
+.s-text p {
+    padding: 0.625rem;
+
+    font-size: 1.5rem;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: var(--txt-bg-color);
+
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+}
+
+.s-text p, .second-card img,
+ .second-card button {
+    margin-top: 1rem;
+}
+
+.second-card button {
+    padding: 16px;
+
+    color: var(--white-color);
+    background-color: var(--btn-color);
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 4px;
+}
+
+.hide {
+    display: none;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+@-webkit-keyframes text-focus-in {
+        0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+        }
+        100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+        }
+    }
+@keyframes text-focus-in {
+        0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+        }
+        100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+        }
+    }
+    
+  
